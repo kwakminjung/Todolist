@@ -1,0 +1,18 @@
+.all_contents {
+    text-align: center;
+}
+
+#title {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#all_del > button {
+    background-color: red;
+    border-color: red;
+    width: 30%;
+    color: white;
+    font-size: 20px;
+}
