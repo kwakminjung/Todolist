@@ -1,5 +1,12 @@
+* {
+    top: 0;
+    left: 0;
+}
+
 .all_contents {
+    top: 0;
     text-align: center;
+    background-color: aquamarine;
 }
 
 #title {
@@ -9,10 +16,43 @@
     margin-bottom: 40px;
 }
 
+#input_todo > input[type = button] {
+    background-color: rgb(80, 80, 192);
+    border-color: rgb(80, 80, 192);
+    color: white;
+    margin-bottom: 20px;
+}
+
+#input_todo > input[type = button]:hover {
+    background-color: rgb(12, 12, 61);
+    border-color: rgb(12, 12, 61);
+}
+
+.check_box > li {
+    list-style-type: none;
+}
+
+.check_box > li > input[type = button] {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.check_box > li > input[type = button]:hover{
+    background-color: rgb(58, 8, 8);
+    border-color: rgb(58, 8, 8);
+}
+
 #all_del > button {
     background-color: red;
     border-color: red;
     width: 30%;
     color: white;
     font-size: 20px;
+    margin-top: 40px;
+}
+
+#all_del > button:hover {
+    background-color: rgb(58, 8, 8);
+    border-color: rgb(58, 8, 8);
 }
