@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todolist</title>
-    <link rel="stylesheet" href="./static/style.css">
-</head>
-<body>
-    <div class="all_contents">
-        <div id="title">TODOLIST</div>
-        <form id="input_todo">
-            <input type="text" id="todo" placeholder="할 일을 입력하세요.">
-            <input type="button" id="plus" value="+">
-        </form>
-        <ul class="check_box">
-            <li>
-            </li>
-        </ul>
-        <div id="all_del">
-            <button>전체삭제</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>todolist</title>
+        <link rel="stylesheet" href="./static/style.css">
+
+    </head>
+    <body>
+        <div class="all_contents">
+            <div id="title">TODOLIST</div>
+            <form id="input_todo">
+                <input type="text" id="todo" placeholder="할 일을 입력하세요.">
+                <input type="button" id="plus" onclick="plus_click()" value="+">
+            </form>
+            <ul class="check_box">
+                <!-- <li>
+                    <input type="checkbox">
+                    <p>할일<p>
+                    <input type="button">
+                </li> -->
+            </ul>
+            <div id="all_del">
+                <button onclick="all_minus()">전체삭제</button>
+            </div>
         </div>
-    </div>
+    </body>
     <script src="./static/home.js"></script>
-</body>
 </html>

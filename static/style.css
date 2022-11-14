@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'UhBeeSe_hyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OKDDUNG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     top: 0;
     left: 0;
@@ -6,7 +30,9 @@
 .all_contents {
     top: 0;
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(179, 218, 253);
+    width: 50%;
+    margin: auto;
 }
 
 #title {
@@ -14,45 +40,64 @@
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family: 'UhBeeSe_hyun';
+    color: rgb(46, 46, 135);
 }
-
+#todo{
+    width: 280px;
+    height: 27px;
+}
 #input_todo > input[type = button] {
     background-color: rgb(80, 80, 192);
     border-color: rgb(80, 80, 192);
     color: white;
     margin-bottom: 20px;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
 }
 
 #input_todo > input[type = button]:hover {
-    background-color: rgb(12, 12, 61);
-    border-color: rgb(12, 12, 61);
+    background-color: rgb(46, 46, 135);
+    border-color: rgb(46, 46, 135);
 }
 
 .check_box > li {
     list-style-type: none;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    font-family: 'KyoboHand';
 }
 
 .check_box > li > input[type = button] {
-    background-color: red;
-    border-color: red;
+    background-color: rgb(46, 46, 135);
+    border: none;
     color: white;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
 }
 
 .check_box > li > input[type = button]:hover{
-    background-color: rgb(58, 8, 8);
-    border-color: rgb(58, 8, 8);
+    background-color: rgb(23, 18, 59);
+    border: none;
 }
 
 #all_del > button {
-    background-color: red;
-    border-color: red;
-    width: 30%;
+    background-color: rgb(46, 46, 135);
+    border: none;
+    width: 120px;
     color: white;
     font-size: 20px;
     margin-top: 40px;
+    border-radius: 12px;
+    height: 40px;
+    font-family: 'GangwonEdu_OTFBoldA';
 }
 
 #all_del > button:hover {
-    background-color: rgb(58, 8, 8);
-    border-color: rgb(58, 8, 8);
+    background-color: rgb(23, 18, 59);
+    border: none;
 }

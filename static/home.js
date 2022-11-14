@@ -1,28 +1,40 @@
-const todoform = document.getElementById("#input_todo")
-const todoinput = document.getElementById("#todo");
-const todolist = document.getElementsByClassName(".check_box");
-const todo = document.getElementById("#todo");
-const com_todo = document.getElementById("#complete");
-const plus_btn = document.getElementById('#plus');
-
-
-function plus_click(event) {
-    const temp = document.createElement('li');
-
-    const temp_check = document.createElement('input');
+function plus_click() {
+    var todoinput = document.getElementById('todo');
+    var todolist = document.getElementsByClassName("check_box");
+    var plus_btn = document.getElementById('plus');
+    
+    var temp = document.createElement('li');
+    temp.setAttribute('class','check');
+    
+    var temp_check = document.createElement('input');
     temp_check.setAttribute('type','checkbox');
     temp_check.setAttribute('class','complete');
 
-    const temp_del = ducument.createElement('input');
+    var temp_del = document.createElement('input');
     temp_del.setAttribute('type','button');
     temp_del.setAttribute('class','minus');
+    temp_del.setAttribute('onclick', 'minus_click(this)');
+    temp_del.setAttribute('value', 'del');
+    
+    var p = document.createElement("p");
 
-    temp.innerText = todoinput.value;
-
+    p.innerHTML = todoinput.value; //innerHTML : 태그사이에 넣겠다
+    
     temp.appendChild(temp_check);
+    temp.appendChild(p);
     temp.appendChild(temp_del);
-    todo.appendChild(temp);
+
+    todolist[0].appendChild(temp);
+
+    todoinput.value=null;
 }
 
-// todoform.addEventListener('submit', plus_click);
-plus_btn.addEventListener('click', plus_click);
+function minus_click(a) {
+    var li = a.parentNode.remove();
+    // console.log(li.children());
+
+}
+
+function all_minus(){
+    
+}
