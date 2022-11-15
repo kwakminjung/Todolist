@@ -1,3 +1,4 @@
+var cnt = 0;
 function plus_click() {
     var todoinput = document.getElementById('todo');
     var todolist = document.getElementsByClassName("check_box");
@@ -36,5 +37,8 @@ function minus_click(a) {
 }
 
 function all_minus(){
-    
+    var li = document.getElementsByTagName('li');
+    while(li.length > 0) {
+        li[0].remove();
+    }
 }
