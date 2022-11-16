@@ -9,3 +9,18 @@
   <li>수정 버튼 구현</li>
   <li>localStorage 사용</li>
 </ul>
+
+
+<h3>오류</h3>
+<ul>
+  <li>loadData : data가 안 불러와짐</li>
+  <li>minus_click : localStorage.removeItem 에서 인덱스 5까지 입력했을 때 5를 remove하면 인덱스 0값의 li까지 remove됨</li>
+  <li>all_minus : localStorage에서는 지워지지만, 화면에서는 지워지지 않음</li>
+</ul>
+
+<h3>알게된 내용</h3>
+<ul>
+  <li>innerHTML은 태그 안에 들어가는 값을 뜻함</li>
+  <li>document.getElementsByClassName은 배열을 반환함</li>
+  <li>localStorage 확인 방법 : 개발자도구 > Application > Storage > Local Storage</li>
+</ul>
