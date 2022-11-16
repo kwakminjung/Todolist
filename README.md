@@ -14,7 +14,8 @@
 <h3>오류</h3>
 <ul>
   <li>loadData : data가 안 불러와짐</li>
-  <li>minus_click : localStorage.removeItem 에서 인덱스 5까지 입력했을 때 5를 remove하면 인덱스 0값의 li까지 remove됨</li>
+  <li>minus_click : localStorage.removeItem 에서 인덱스 5까지 입력했을 때<br> 5를 remove하면 인덱스 0값의 li까지 remove됨<br>
+  : 그냥 렉 걸린 거 같음 여러번 실행해보기</li>
   <li>all_minus : localStorage에서는 지워지지만, 화면에서는 지워지지 않음</li>
 </ul>
 
