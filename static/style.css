@@ -74,6 +74,10 @@
     font-family: 'KyoboHand';
 }
 
+.check_box > li > p {
+    margin: 0 10px;
+}
+
 .check_box > li > input[type = button] {
     background-color: rgb(46, 46, 135);
     border: none;

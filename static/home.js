@@ -1,7 +1,9 @@
-function plus_click() {
-    var todoinput = document.getElementById('todo');
-    var todolist = document.getElementsByClassName("check_box");
+window.onload = loadData;
 
+function input_data(input_val) {
+    var input_val = document.getElementById('todo');
+    var todolist = document.getElementsByClassName("check_box");
+    
     var temp = document.createElement('li');
     temp.setAttribute('class','check');
     
@@ -10,7 +12,7 @@ function plus_click() {
     temp_check.setAttribute('class','complete');
 
     var p = document.createElement("p");
-    p.innerHTML = todoinput.value; //innerHTML : 태그사이에 넣겠다
+    p.innerHTML = input_val.value;
     
     var temp_del = document.createElement('input');
     temp_del.setAttribute('type','button');
@@ -23,22 +25,53 @@ function plus_click() {
     temp.appendChild(temp_del);
 
     todolist[0].appendChild(temp);
+}
 
-    todoinput.value=null;
+function loadData() {
+    for(var i = 0 ; i < localStorage.length ; i++){
+        input_data(data);
+        var data = localStorage.getItem(i);
+    }
+}
+
+function plus_click() {
+    var todo_input = document.getElementById('todo');
+    input_data(todo_input);
+
+    var li = document.getElementsByTagName('li');
+
+    localStorage.setItem(localStorage.length, li);
+
+    todo_input.value=null;
 }
 
 function minus_click(a) {
-    var li = a.parentNode.remove();
-    // console.log(li.children());
-
+    var li = a.parentNode;
+    var ul = li.parentNode;
+    
+    var li_arr = ul.children;
+    // console.log(li_arr[0]);
+    
+    for(i = 0;i < localStorage.length;i++) {
+        // console.log(li_arr[i] + 'ㄸ');
+        // console.log(li);
+        if(li_arr[i] === li) {
+            console.log('dd');
+            localStorage.removeItem(i);
+            li.remove();
+            break;
+        }
+    }
+    localStorage.removeItem(localStorage.length);
 }
 
-function all_minus(){
-    // var li = document.getElementsByTagName('li');
+function all_minus() {
     var ul = document.getElementsByClassName('check_box');
     var li = ul[0].children;
     var li_cnt = ul.childElementCount;
     while(li_cnt>0) {
         li[0].remove();
     }
+    window.localStorage.clear();
+    console.log(localStorage.length);
 }
