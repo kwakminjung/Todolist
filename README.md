@@ -42,3 +42,14 @@
   <li>arr.sort(function) 사용법(내림차순)</li>
   <li>localStorage에서 그냥 getItem하면 순서가 뒤바뀌는 현상이 생기므로 요소를 화면에 넣기 전에(input_data() 이전에) 정렬할 필요가 있음</li>
 </ul>
+
+<h3>기간</h3>
+<ul>
+  <li>1차(localStorage 사용 이전) : 22.11.14 ~ 15</li>
+  <li>2차(localStorage 사용 및 오류 수정) : 22.11.16 ~ 18</li>
+</ul>
+
+<h3>인원</h3>
+<ul>
+  <li>1명</li>
+</ul>
