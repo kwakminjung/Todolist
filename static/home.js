@@ -1,7 +1,7 @@
 window.onload = loadData;
 
 function input_data(input_val) {
-    var input_val = document.getElementById('todo');
+    // var input_val = document.getElementById('todo').value;
     var todo_list = document.getElementById('todo_list');
     
     var temp = document.createElement('li');
@@ -10,7 +10,7 @@ function input_data(input_val) {
     temp_check.setAttribute('type','checkbox');
     
     var p = document.createElement("p");
-    p.innerHTML = input_val.value;
+    p.innerHTML = input_val;
     
     var temp_del = document.createElement('input');
     temp_del.setAttribute('type','button');
@@ -26,19 +26,20 @@ function input_data(input_val) {
 
 function loadData() {
     for(var i = 0 ; i < localStorage.length ; i++){
-        input_data(data);
-        var a = localStorage.key(i);
-        var data = localStorage.getItem(a);
+        var key_data = localStorage.key(i);
+        var todo_data = localStorage.getItem(key_data);
+        // console.log(todo_data);
+        input_data(todo_data);
     }
 }
 
 function plus_todo() {
     var todo_input = document.getElementById('todo');
-    input_data(todo_input);
+    input_data(todo_input.value);
 
     var li = document.getElementsByTagName('li');
 
-    localStorage.setItem('key' + localStorage.length, li);
+    localStorage.setItem('key' + localStorage.length, todo_input.value);
 
     todo_input.value = null;
 }
