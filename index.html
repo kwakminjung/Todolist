@@ -13,9 +13,9 @@
             <div id="title">TODOLIST</div>
             <form id="input_todo">
                 <input type="text" id="todo" placeholder="할 일을 입력하세요.">
-                <input type="button" id="plus" onclick="plus_click()" value="+">
+                <input type="button" onclick="plus_todo()" value="+">
             </form>
-            <ul class="check_box">
+            <ul id="todo_list">
                 <!-- <li>
                     <input type="checkbox">
                     <p>할일<p>
@@ -23,7 +23,7 @@
                 </li> -->
             </ul>
             <div id="all_del">
-                <button onclick="all_minus()">전체삭제</button>
+                <button onclick="minus_all_todo()">전체삭제</button>
             </div>
         </div>
     </body>

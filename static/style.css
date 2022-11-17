@@ -46,7 +46,7 @@
     font-family: 'UhBeeSe_hyun';
     color: rgb(46, 46, 135);
 }
-#todo{
+#input_todo > input[type = text]{
     width: 280px;
     height: 27px;
 }
@@ -66,7 +66,7 @@
     border-color: rgb(46, 46, 135);
 }
 
-.check_box > li {
+#todo_list > li {
     list-style-type: none;
     display: flex;
     margin: auto;
@@ -74,11 +74,11 @@
     font-family: 'KyoboHand';
 }
 
-.check_box > li > p {
+#todo_list > li > p {
     margin: 0 10px;
 }
 
-.check_box > li > input[type = button] {
+#todo_list > li > input[type = button] {
     background-color: rgb(46, 46, 135);
     border: none;
     color: white;
@@ -87,7 +87,7 @@
     width: 25px;
 }
 
-.check_box > li > input[type = button]:hover{
+#todo_list > li > input[type = button]:hover{
     background-color: rgb(23, 18, 59);
     border: none;
 }
