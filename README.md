@@ -26,9 +26,9 @@
   
   <li>✅loadData() - (2) : 새로고침하면서 순서가 뒤바뀌는 오류 발생<br><br>
   해결방법 : sort함수를 통해서 순서대로 나오게 했음<br>
-  그 과정에서 key값을 다시 0부터 주기로 하고 코드를 짰더니 localStorage.key(i)가 key_arr배열(후에 정렬할 배열)에 들어갈때 문자열로 저장되는 현상이 발생함<br>
+  그 과정에서 key값을 다시 0부터 주기로 하고 코드를 짰더니 localStorage.key(i)가 <br>key_arr배열(후에 정렬할 배열)에 들어갈때 문자열로 저장되는 현상이 발생함<br><br>
   parseInt()함수를 이용해 key값을 정수로 바꾸어 key_arr에 push함<br><br>
-  그래도 화면에 안 나오는 현상이 발생하여 코드 확인중에 <br>var key_arr = new Array()를 for문 안에 선언한 것을 발견 ->  for문 위에 쓰는 것으로 수정<br>
+  그래도 화면에 안 나오는 현상이 발생하여 코드 확인중에 <br>var key_arr = new Array()를 for문 안에 선언한 것을 발견 ->  for문 위에 쓰는 것으로 수정<br><br>
   정렬은 a-b가 정수가 나온다면 true값을 반환함을 이용함<br>
   </li><br>
 </ul>
