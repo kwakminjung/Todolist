@@ -13,7 +13,7 @@
 
 <h3>오류</h3>
 <ul>
-  <li>⬜loadData() : data가 안 불러와짐</li>
+  <li>⬜loadData() : 새로고침하면 data에 들어갈 글자가 사라짐</li>
   <li>✅minus_todo() : localStorage.removeItem 에서 인덱스 5까지 입력했을 때<br> 5를 remove하면 인덱스 0값의 li까지 remove됨<br>
   : minus_todo 에서 localStorage에서 remove할 때 localStorage.length보다 짧을 경우로 해서<br> 만약 5개의 li가 있을때 3을 지우게 되면 5는 지우지 못하는 문제였음<br>
   해결방법 : localStorage.key()라는 함수를 이용하여 ul 태그의 자식태그와 <br>li에 현재 들어가 있는 값을 비교하여 같은 경우에 li의 key값을 반환하도록 수정함</li>
