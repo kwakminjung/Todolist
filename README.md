@@ -40,7 +40,7 @@
   <li>localStorage 확인 방법 : 개발자도구 > Application > Storage > Local Storage</li>
   <li>localStorage.key()는 로컬의 키값을 가져오는 함수임</li>
   <li>arr.sort(function) 사용법(내림차순)</li>
-  <li>localStorage에서 그냥 getItem하면 순서가 뒤바뀌는 현상이 생기므로 요소를 화면에 넣기 전에(input_data() 이전에) 정렬할 필요가 있음</li>
+  <li>localStorage에서 그냥 getItem하면 순서가 뒤바뀌는 현상이 생기므로 <br>요소를 화면에 넣기 전에(input_data() 이전에) 정렬할 필요가 있음</li>
 </ul>
 
 <h3>기간</h3>
