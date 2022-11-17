@@ -24,7 +24,13 @@
   해결방법 : 기존에 썼던 li_cnt(li의 개수를 세던 변수)를 그대로 while반복문에 돌려서 안 되던 거였음 <br>-> 콘솔창에 아무 문자열이나 찍어보고 무한으로 돌아가고 있다는 것을 알았음
   <br>ul.childElementCount로 li의 개수를 세되, li_cnt에 값을 주던 것을 무한반복문의 조건에 넣어 코드를 줄일 수 있었음</li><br>
   
-  <li>⬜loadData() - (2) : 새로고침하면 입력된 순서가 아니라 뒤죽박죽으로 남아있음</li><br>
+  <li>✅loadData() - (2) : 새로고침하면서 순서가 뒤바뀌는 오류 발생<br><br>
+  해결방법 : sort함수를 통해서 순서대로 나오게 했음<br>
+  그 과정에서 key값을 다시 0부터 주기로 하고 코드를 짰더니 localStorage.key(i)가 key_arr배열(후에 정렬할 배열)에 들어갈때 문자열로 저장되는 현상이 발생함<br>
+  parseInt()함수를 이용해 key값을 정수로 바꾸어 key_arr에 push함<br>
+  그래도 화면에 안 나오는 현상이 발생하여 코드 확인중에 var key_arr = new Array()를 for문 안에 선언한 것을 발견 ->  for문 위에 쓰는 것으로 수정<br>
+  정렬은 a-b가 정수가 나온다면 true값을 반환함을 이용함<br>
+  </li><br>
 </ul>
 
 <h3>알게된 내용</h3>
@@ -33,4 +39,6 @@
   <li>document.getElementsByClassName은 배열을 반환함</li>
   <li>localStorage 확인 방법 : 개발자도구 > Application > Storage > Local Storage</li>
   <li>localStorage.key()는 로컬의 키값을 가져오는 함수임</li>
+  <li>arr.sort(function) 사용법(내림차순)</li>
+  <li>localStorage에서 그냥 getItem하면 순서가 뒤바뀌는 현상이 생기므로 요소를 화면에 넣기 전에(input_data() 이전에) 정렬할 필요가 있음</li>
 </ul>
