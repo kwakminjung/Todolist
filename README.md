@@ -20,7 +20,7 @@
   문제 이해 : minus_todo 에서 localStorage에서 remove할 때 localStorage.length보다 짧을 경우로 해서<br> 만약 5개의 li가 있을때 3을 지우게 되면 5는 지우지 못하는 문제였음<br><br>
   해결방법 : localStorage.key()라는 함수를 이용하여 ul 태그의 자식태그와 <br>li에 현재 들어가 있는 값을 비교하여 같은 경우에 li의 key값을 반환하도록 수정함</li><br>
   
-  <li>✅minus_all_todo() : localStorage에서는 지워지지만, 화면에서는 지워지지 않음<br>
+  <li>✅minus_all_todo() : localStorage에서는 지워지지만, 화면에서는 지워지지 않음<br><br>
   해결방법 : 기존에 썼던 li_cnt(li의 개수를 세던 변수)를 그대로 while반복문에 돌려서 안 되던 거였음 <br>-> 콘솔창에 아무 문자열이나 찍어보고 무한으로 돌아가고 있다는 것을 알았음
   <br>ul.childElementCount로 li의 개수를 세되, li_cnt에 값을 주던 것을 무한반복문의 조건에 넣어 코드를 줄일 수 있었음</li><br>
   
