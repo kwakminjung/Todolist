@@ -35,7 +35,7 @@ function loadData() {
     });
 
     for(var i = 0 ; i < localStorage.length ; i++) {
-        input_data(key_arr[i]);
+        input_data(localStorage.getItem(key_arr[i]));
     }
 }
 
