@@ -7,7 +7,7 @@
 <ul>
   <li>체크하면 밑줄 긋기</li>
   <li>수정 버튼 구현</li>
-  <li>localStorage 사용</li>
+  <li>✅localStorage 사용</li>
 </ul>
 
 
