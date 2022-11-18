@@ -1,4 +1,4 @@
-window.onload = loadData;
+window.onload = load_data;
 
 function input_data(input_val) {
     var todo_list = document.getElementById('todo_list');
@@ -23,7 +23,7 @@ function input_data(input_val) {
     todo_list.appendChild(temp);
 }
 
-function loadData() {
+function load_data() {
     var key_arr = new Array();
     for(var i = 0 ; i < localStorage.length ; i++){
         key_data = parseInt(localStorage.key(i));
@@ -43,29 +43,27 @@ function plus_todo() {
     var todo_input = document.getElementById('todo');
     input_data(todo_input.value);
 
-    var li = document.getElementsByTagName('li');
-
     localStorage.setItem(localStorage.length, todo_input.value);
 
     todo_input.value = null;
 }
 
-function minus_todo(a) {
-    var li = a.parentNode;
-    var ul = li.parentNode;
+function minus_todo(del_btn) {
+    var target_li = del_btn.parentNode;
+    var ul = target_li.parentNode;
     
     var li_arr = ul.children;
     
     for(i = 0;i < localStorage.length;i++) {
-        if(li_arr[i] === li) {
+        if(li_arr[i] === target_li) {
             localStorage.removeItem(localStorage.key(i));
-            li.remove();
+            target_li.remove();
             break;
         }
     }
 }
 
-function minus_all_todo() {
+function clear_todo() {
     var ul = document.getElementById('todo_list');
     var li = ul.children;
     while(ul.childElementCount>0) {
