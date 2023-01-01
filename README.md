@@ -5,7 +5,7 @@
 
 <h3>업데이트 계획</h3>
 <ul>
-  <li>체크하면 밑줄 긋기</li>
+  <li>✅체크하면 밑줄 긋기 (23.1.1)<br></t>ㄴlocalStroage로 유지하기</li>
   <li>수정 버튼 구현</li>
   <li>✅localStorage 사용</li>
 </ul>
