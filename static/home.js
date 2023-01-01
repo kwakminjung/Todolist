@@ -7,6 +7,7 @@ function input_data(input_val) {
     
     var temp_check = document.createElement('input');
     temp_check.setAttribute('type','checkbox');
+    temp_check.setAttribute('onclick', 'check(this)');
     
     var p = document.createElement("p");
     p.innerHTML = input_val;
@@ -70,4 +71,18 @@ function clear_todo() {
         li[0].remove();
     }
     window.localStorage.clear();
+}
+
+function check(box) {
+    var target_li = box.parentNode;
+    var target_p = target_li.children;
+    var ul = target_li.parentNode;
+    
+    var li_arr = ul.children;
+
+    if(box.checked == true){
+        target_p[1].style.textDecorationLine = 'line-through';
+    } else {
+        target_p[1].style.textDecorationLine = '';
+    }
 }
