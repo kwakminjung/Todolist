@@ -1,5 +1,5 @@
 # Todolist
-<a href="https://kwakminjung.github.io/Todolist/">TODOLIST 바로가기</a>
+<a href="https://kwakminjung.github.io/Todolist/">TODOLIST 사용해보기</a>
 
 ![image](https://user-images.githubusercontent.com/100507512/216514534-e80e1526-75c0-4b8e-99a4-cbb9827c1f8e.png)
 
